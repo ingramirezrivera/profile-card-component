@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@700&family=Poppins&display=swap');
+
+:root {
+    --DarkCyan: hsl(185, 75%, 39%);
+    --VeryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --DarkGrayishBlue: hsl(227, 10%, 46%);
+    --DarkGray: hsl(0, 0%, 59%);
+    --Kumbh: 'Kumbh Sans', sans-serif;
+    --Poppins: 'Poppins', sans-serif;
+    --White: #ffff;
+    --Gray: #d7d7d7;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-size: 1.3rem;
+}
+
+body {
+    background-color: var(--DarkCyan);
+    font-family: var(--Poppins);
+    background-image: url('./images/bg-pattern-top.svg'), url('./images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right 51vw bottom 20vh, left 45vw top 50vh;
+}
+
+/***************** Card *****************/
+.card-container {
+    position: relative;
+    margin: 170px auto 50px;
+    width: 330px;
+    height: 380px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.bubbles {
+    background: url('images/bg-pattern-card.svg');
+    width: 100%;
+    height: 140px;
+}
+.photo {
+    position: absolute;
+    top: 87px;
+    left: 35%;
+    border: 5px solid var(--White);
+    border-radius: 50%;
+    overflow: hidden;
+    height: 96px;
+}
+.personal-data-container {
+    background-color: var(--White);
+    height: 166px;
+    padding: 75px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.name {
+    font-weight: 700;
+    color: var(--VeryDarkDesaturatedBlue);
+}
+.age, .city {
+    color: var(--DarkGray);
+}
+.city {
+    margin-top: 6px;
+    font-size: 0.8rem;
+}
+.stats-container {
+    background-color: var(--White);
+    border-top: 1px solid var(--Gray);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 74px;
+}
+.statistics {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+}
+.quantity {
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--VeryDarkDesaturatedBlue);
+}
+.units {
+    margin: 0 auto;
+    font-size: 0.5rem;
+    color: var(--DarkGray);
+    letter-spacing: 2px;
+}
+
+
+
+/***************** footer ***************/
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/************** Desktop  1440px *************/
+
+@media screen and (min-width: 1440px){
+    .card-container {
+        width: 350px;
+    }
+}
